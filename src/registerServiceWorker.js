@@ -19,7 +19,8 @@ const isLocalhost = Boolean(
 );
 
 export default function register() {
-  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+  if ('serviceWorker' in navigator) {
+  // if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
     if (publicUrl.origin !== window.location.origin) {
@@ -47,6 +48,8 @@ export default function register() {
       } else {
         // Is not local host. Just register service worker
         registerValidSW(swUrl);
+        // addInstallEventListener();
+        // addActiveEventListener();
       }
     });
   }
