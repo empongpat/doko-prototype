@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .card .title {
+    margin-bottom: 0; }
+  .card .details-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .card .button {
+    color: #fff;
+    background-color: #262A32;
+    padding: 1em 1.5em;
+    border-radius: 2em;
+    margin-bottom: 1em; }
+
+/*# sourceMappingURL=WorkshopCard.css.map */

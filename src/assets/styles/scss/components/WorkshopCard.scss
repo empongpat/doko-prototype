@@ -1,0 +1,26 @@
+@import "../helpers/_variables";
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .details-container {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+  }
+  
+  .button {
+    color: $white; 
+    background-color: $theme-black; 
+    padding: 1em 1.5em; 
+    border-radius: 2em; 
+    margin-bottom: 1em; 
+  }
+  
+}

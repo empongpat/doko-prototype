@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import logo from './logo.svg';
 import Navbar from 'containers/layout/Navbar';
 
+import Landing from 'containers/Landing'
+import Workshop from 'containers/Workshop'
+
 const Page = ({ title }) => (
     <div className="App">
       <Navbar />
@@ -23,6 +26,9 @@ const Page = ({ title }) => (
       </p>
       <p>
         <Link to="/settings">Settings</Link>
+      </p>
+      <p>
+        <Link to="/workshop">Workshop</Link>
       </p>
     </div>
 );
@@ -43,9 +49,9 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Landing} />
         <Route path="/career" component={About} />
-        <Route path="/workshop" component={Settings} />
+        <Route path="/workshop" component={Workshop} />
       </Switch>
     );
   }
