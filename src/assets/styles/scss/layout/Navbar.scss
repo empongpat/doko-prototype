@@ -1,0 +1,41 @@
+@import "../helpers/variables";
+
+@font-face {
+    font-family: 'Noto Sans Medium';
+    src: url(../../../fonts/NotoSans-Medium.ttf) format('truetype');
+}
+
+#brand {
+    color: $theme-black;
+    font-family: 'Noto Sans Medium';
+    font-size: 32px;
+}
+
+.navbar-nav {
+    .nav-item {
+        margin: 0 1.5em 0 1.5em;
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+        .custom-nav-link {
+            &.nav-link {
+                color: $theme-black-half-opacity;
+                font-family: $font-stack;
+                &:hover {
+                    color: $theme-black-three-quarter-opacity;
+                }
+                &.active {
+                    color: $theme-black;
+                }
+            }
+        }
+    }
+}
+
+.navbar-collaspe
+
+#signInButton {
+    font-family: $font-stack;
+}

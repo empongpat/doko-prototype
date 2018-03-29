@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1536px" height="1536px" viewBox="0 0 1536 1536" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(368.000000, 168.000000)">
+            <rect id="Rectangle-2" fill="#5CBCC0" x="0" y="0" width="800" height="1200" rx="10"></rect>
+            <polygon id="Rectangle" fill="#4496D2" points="182 113.921875 782 0 782 1200 182 1086.07813"></polygon>
+            <polygon id="Star" fill="#F0A920" points="287 625 257.610737 640.45085 263.223587 607.725425 239.447174 584.54915 272.305369 579.774575 287 550 301.694631 579.774575 334.552826 584.54915 310.776413 607.725425 316.389263 640.45085"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@font-face {
+  font-family: 'Noto Sans Medium';
+  src: url(../../../fonts/NotoSans-Medium.ttf) format("truetype"); }
+#brand {
+  color: #262A32;
+  font-family: 'Noto Sans Medium';
+  font-size: 32px; }
+
+.navbar-nav .nav-item {
+  margin: 0 1.5em 0 1.5em; }
+
+.navbar-light .navbar-nav .custom-nav-link.nav-link {
+  color: rgba(38, 42, 50, 0.5);
+  font-family: "Open Sans", sans-serif; }
+  .navbar-light .navbar-nav .custom-nav-link.nav-link:hover {
+    color: rgba(38, 42, 50, 0.75); }
+  .navbar-light .navbar-nav .custom-nav-link.nav-link.active {
+    color: #262A32; }
+
+.navbar-collaspe
+#signInButton {
+  font-family: "Open Sans", sans-serif; }
+
+/*# sourceMappingURL=Navbar.css.map */

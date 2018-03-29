@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom'
 import logo from './logo.svg';
+import Navbar from 'containers/layout/Navbar';
 
 const Page = ({ title }) => (
     <div className="App">
+      <Navbar />
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h2>{title}</h2>
@@ -41,9 +43,9 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/settings" component={Settings} />
+        <Route exact path="/" component={Home} />
+        <Route path="/career" component={About} />
+        <Route path="/workshop" component={Settings} />
       </Switch>
     );
   }
