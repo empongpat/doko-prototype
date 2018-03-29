@@ -12,11 +12,15 @@
     "reactstrap": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p sass start-js",
     "build": "yarn sass:build && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/assets/styles/scss:src/assets/styles/css",
     "sass:build": "sass --update src/assets/styles/scss:src/assets/styles/css"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
   }
 }
