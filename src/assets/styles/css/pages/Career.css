@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.row > div {
+  margin-bottom: 5em; }
+
+.category-box {
+  color: #262A32;
+  border: 3px solid;
+  padding: 5em;
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+/*# sourceMappingURL=Career.css.map */

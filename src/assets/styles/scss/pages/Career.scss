@@ -1,0 +1,19 @@
+@import '../helpers/_variables';
+
+.row {
+  > div {
+    margin-bottom: 5em;
+  }
+}
+
+.category-box {
+  color: $theme-black;
+  border: 3px solid;
+  padding: 5em;
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

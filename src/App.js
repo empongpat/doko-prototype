@@ -6,6 +6,7 @@ import logo from './logo.svg';
 import Navbar from 'containers/layout/Navbar';
 
 import Landing from 'containers/Landing'
+import Career from 'containers/Career'
 import Workshop from 'containers/Workshop'
 
 const Page = ({ title }) => (
@@ -28,6 +29,9 @@ const Page = ({ title }) => (
         <Link to="/settings">Settings</Link>
       </p>
       <p>
+        <Link to="/career">Career</Link>
+      </p>
+      <p>
         <Link to="/workshop">Workshop</Link>
       </p>
     </div>
@@ -48,11 +52,14 @@ const Settings = (props) => (
 class App extends Component {
   render() {
     return (
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path="/career" component={About} />
-        <Route path="/workshop" component={Workshop} />
-      </Switch>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/career" component={Career} />
+          <Route path="/workshop" component={Workshop} />
+        </Switch>
+      </div>
     );
   }
 }
