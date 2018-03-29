@@ -13,10 +13,10 @@
   },
   "scripts": {
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p sass start-js",
-    "build": "yarn sass:build && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "NODE_PATH=src/ npm-run-all -p sass start-js",
+    "build": "yarn sass:build && NODE_PATH=src/ react-scripts build",
+    "test": "NODE_PATH=src/ react-scripts test --env=jsdom",
+    "eject": "NODE_PATH=src/ react-scripts eject",
     "sass": "sass --watch src/assets/styles/scss:src/assets/styles/css",
     "sass:build": "sass --update src/assets/styles/scss:src/assets/styles/css"
   },
