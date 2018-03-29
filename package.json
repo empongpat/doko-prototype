@@ -13,9 +13,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn sass:build && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sass": "sass --watch src/assets/styles/scss:src/assets/styles/css"
+    "sass": "sass --watch src/assets/styles/scss:src/assets/styles/css",
+    "sass:build": "sass --update src/assets/styles/scss:src/assets/styles/css"
   }
 }
