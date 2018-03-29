@@ -26,7 +26,7 @@ export default class Example extends React.Component {
         return (
             <div>
                 <Navbar color="faded" light expand="md">
-                    <NavbarBrand id="brand" href="/"><img src={Logo} alt="" width="60" height="60" /><span>doko</span></NavbarBrand>
+                    <NavbarBrand id="brand" tag={RouterNavLink} to="/"><img src={Logo} alt="" width="60" height="60" /><span>doko</span></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
