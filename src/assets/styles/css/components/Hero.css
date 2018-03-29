@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.hero {
+  min-height: 100vh;
+  background-image: url("../../../images/landing_hero.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: 50% 50%; }
+  .hero .slogan {
+    color: #fff;
+    border: 10px solid;
+    background-color: transparent;
+    font-size: 36px;
+    padding: 1em;
+    font-weight: 600; }
+
+/*# sourceMappingURL=Hero.css.map */

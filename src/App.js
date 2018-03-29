@@ -4,6 +4,9 @@ import { Route, Switch } from 'react-router';
 import { Link } from 'react-router-dom'
 import logo from './logo.svg';
 
+import Landing from 'containers/Landing'
+import Workshop from 'containers/Workshop'
+
 const Page = ({ title }) => (
     <div className="App">
       <div className="App-header">
@@ -21,6 +24,9 @@ const Page = ({ title }) => (
       </p>
       <p>
         <Link to="/settings">Settings</Link>
+      </p>
+      <p>
+        <Link to="/workshop">Workshop</Link>
       </p>
     </div>
 );
@@ -41,9 +47,11 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/settings" component={Settings} />
+        <Route path="/landing" component={Landing} />
+        <Route path="/workshop" component={Workshop} />
       </Switch>
     );
   }

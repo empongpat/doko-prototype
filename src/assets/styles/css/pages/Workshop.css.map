@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,yBAAgB;EACd,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,GAAG;AAGb,eAAM;EACJ,aAAa,EAAE,GAAG",
+"sources": ["../../scss/pages/Workshop.scss"],
+"names": [],
+"file": "Workshop.css"
+}
