@@ -1,0 +1,39 @@
+@import '../helpers/_variables';
+
+.career-details-title {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    border: 5px solid $theme-turquoise;
+    top: 100%;
+    left: 0%;
+    width: 100px;
+    margin-top: 10px;
+  }
+}
+
+.career-list {
+  .row {
+    margin-top: 30px;
+    padding: 0 5%;
+
+    a:hover {
+      text-decoration: none;
+      color: unset;
+    }
+  }
+}
+
+.career-list-box {
+  color: $theme-black;
+  border: 5px solid $theme-turquoise;
+  margin: 1em 2em;
+  height: 5em;
+  background-color: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

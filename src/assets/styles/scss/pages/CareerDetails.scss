@@ -1,0 +1,50 @@
+@import '../helpers/_variables';
+
+.career-name {
+  text-align: center;
+}
+
+.career-description {
+  text-align: center;
+}
+
+.career-stat-row {
+  text-align: center;
+
+  .career-stat-title {
+  }
+}
+
+.career-skill-tag-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.career-skill-tag {
+  text-align: center;
+  color: $theme-orange;
+  border: 3px solid $theme-orange;
+  width: fit-content;
+  padding: 5px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.career-salary {
+  font-size: 64px;
+}
+.career-salary-currency {
+  font-size: 32px;
+}
+
+.career-company-image-wrapper {
+  width: 50%;
+  > img {
+    width: 100%;
+  }
+}
+
+.career-careerpath-container {
+  display: flex;
+  justify-content: center;
+}

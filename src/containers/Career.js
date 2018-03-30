@@ -1,11 +1,13 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 import 'assets/styles/css/pages/Career.css'
 
 const categories = [
-  { name: 'INFORMATION TECHNOLOGY' }, { name: 'BUSINESS' }, { name: 'ARTS' },
-  { name: 'COMMUNICATION' }, { name: 'ENGINEER' }, { name: 'LAW' }
+  { name: 'INFORMATION TECHNOLOGY', path: 'information_technology' }, { name: 'BUSINESS', path: 'business' },
+  { name: 'ARTS', path: 'arts' },{ name: 'COMMUNICATION', path: 'communication' },
+  { name: 'ENGINEER', path: 'engineer' }, { name: 'LAW', path: 'law' }
 ]
 
 export default class Career extends React.Component {
@@ -17,16 +19,16 @@ export default class Career extends React.Component {
 
   render() {
 
-    const categoryDivs = this.state.categories.map(({ name }) => {
+    const categoryDivs = this.state.categories.map(({ name, path }) => {
       return (
-      <Col xs="12" md="6" lg="4">
-        <div className="category-box">{name}</div>
+      <Col xs="12" md="6" lg="4" key={'catDiv' + name}>
+        <Link to={`/career/${path}`}><button className="category-box">{name}</button></Link>
       </Col>
       )
     })
     
     return (
-      <Container>
+      <Container className="career-container">
         <Row>
           {categoryDivs}
         </Row>

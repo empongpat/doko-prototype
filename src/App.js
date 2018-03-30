@@ -5,6 +5,8 @@ import Navbar from 'containers/layout/Navbar';
 
 import Landing from 'containers/Landing'
 import Career from 'containers/Career'
+import CareerList from 'containers/CareerList'
+import CareerDetails from 'containers/CareerDetails'
 import Workshop from 'containers/Workshop'
 
 class App extends Component {
@@ -14,6 +16,8 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Landing} />
+          <Route path="/career/:category/:name" component={CareerDetails} />
+          <Route path="/career/:category" component={CareerList} />
           <Route path="/career" component={Career} />
           <Route path="/workshop" component={Workshop} />
         </Switch>

@@ -1,8 +1,18 @@
 @import '../helpers/_variables';
 
-.row {
-  > div {
-    margin-bottom: 5em;
+.career-container {
+  margin-top: 2em;
+  .row {
+    > div {
+      margin-bottom: 5em;
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      
+    }
   }
 }
 
@@ -11,6 +21,8 @@
   border: 3px solid;
   padding: 5em;
   height: 200px;
+  width: 100%;
+  background-color: transparent;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
