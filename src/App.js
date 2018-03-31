@@ -13,7 +13,7 @@ import CareerInterest from 'containers/CareerInterest'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div class="content-container">
         <Navbar />
         <Switch>
           <Route exact path="/" component={Landing} />

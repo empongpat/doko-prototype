@@ -16,7 +16,7 @@ export default class Workshop extends React.Component {
   render() {
     const titleText = 'RELATED WORKSHOPS'
     const cards = this.state.cardData.map(data => {
-      return <Col xs="12" md="6" lg="4" ><WorkshopCard /></Col>
+      return <Col xs={12} sm={6} md={4} lg={3} ><WorkshopCard /></Col>
     })
 
     return (
