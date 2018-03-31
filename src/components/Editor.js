@@ -3,7 +3,7 @@ import AceEditor from 'react-ace'
 import PropTypes from 'prop-types'
 
 import 'brace/mode/javascript'
-import 'brace/theme/monokai'
+// import 'brace/theme/monokai'
 
 export default class Editor extends React.Component {
 
@@ -32,7 +32,7 @@ export default class Editor extends React.Component {
     return (
       <AceEditor
         mode={'javascript'}
-        theme={'monokai'}
+        // theme={'monokai'}
         onChange={this.onChange}
         name="EDITOR"
         fontSize={14}
@@ -42,8 +42,11 @@ export default class Editor extends React.Component {
         value={value}
         setOptions={{
           showLineNumbers: true
-        }} 
-        theme="s"/>
+        }}
+        height="100%"
+        width="100%"
+        debounceChangePeriod={500}
+        />
     )
   }
 }

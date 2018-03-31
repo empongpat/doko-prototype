@@ -22,4 +22,11 @@
 #signInButton {
   font-family: "Open Sans", sans-serif; }
 
+.navbar-title {
+  color: white;
+  position: absolute;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%); }
+
 /*# sourceMappingURL=Navbar.css.map */

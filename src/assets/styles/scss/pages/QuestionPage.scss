@@ -5,7 +5,7 @@
     font-weight: bold;
     border: 3px solid white;
     border-radius: 100px;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .theme-gray-bg {
@@ -21,4 +21,44 @@
     background: white;
     height: 100%;
     padding: 10px;
+    position: relative;
+}
+
+.content-container {
+    margin-top: 0px !important;
+    padding-top: 86px;
+    height: 100%;
+}
+
+.expand-button {
+    width: 50px !important;
+    height: 50px;
+    border: 3px solid $theme-green;
+    color: $theme-green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background: white;
+    opacity: 1;
+}
+
+.expand-button.active {
+    top: 0px;
+    transform: translate(50%,-50%)
+}
+
+.topic-menu {
+    background: #eeeeee;
+    width: calc(100% - 20px);
+    height: 50%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition: height 300ms ease-in-out;
 }

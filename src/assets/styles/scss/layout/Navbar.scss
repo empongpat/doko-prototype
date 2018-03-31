@@ -39,3 +39,11 @@
 #signInButton {
     font-family: $font-stack;
 }
+
+.navbar-title {
+    color: white;
+    position: absolute;
+    font-size: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
