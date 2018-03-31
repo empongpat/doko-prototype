@@ -1,4 +1,5 @@
 @import '../helpers/_variables';
+@import '../helpers/_breakpoints';
 
 .career-name {
   text-align: center;
@@ -47,4 +48,13 @@
 .career-careerpath-container {
   display: flex;
   justify-content: center;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: center;
+    .career-careerpath-items {
+      margin-right: 0;
+      margin-bottom: 40px;
+      width: 80%
+    }
+  }
 }

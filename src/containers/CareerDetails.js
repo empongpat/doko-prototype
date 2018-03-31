@@ -118,7 +118,7 @@ export default class CareerDetails extends React.Component {
             {data.careerPath.map((name, i) => {
               const gradient = (i + 1) / length
               return (
-                <Div key={'careerPath' + i} gradient={gradient}>{name}</Div>
+                <Div key={'careerPath' + i} gradient={gradient} className="career-careerpath-items">{name}</Div>
               )
             })}
           </div>
