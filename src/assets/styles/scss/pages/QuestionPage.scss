@@ -1,0 +1,24 @@
+@import '../helpers/_variables';
+.btn-question-footer {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 100px;
+    font-size: 10px;
+}
+
+.theme-gray-bg {
+    background-color: $theme-gray;
+}
+
+.theme-black-bg {
+    background-color: $theme-black;
+}
+
+.box {
+    border-radius: 10px;
+    background: white;
+    height: 100%;
+    padding: 10px;
+}

@@ -14,7 +14,7 @@ import TestQuestionPage from 'containers/TestQuestionPage'
 class App extends Component {
   render() {
     return (
-      <div class="content-container">
+      <div className="content-container">
         <Navbar />
         <Switch>
           <Route exact path="/" component={Landing} />

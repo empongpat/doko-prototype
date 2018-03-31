@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAcQ,gEAAwD;ACbhE,oBAAqB;EACjB,UAAU,EAAE,WAAW;EACvB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,eAAe;EACvB,aAAa,EAAE,KAAK;EACpB,SAAS,EAAE,IAAI;;AAGnB,cAAe;EACX,gBAAgB,EDPP,OAAO;;ACUpB,eAAgB;EACZ,gBAAgB,EDfN,OAAO;;ACkBrB,IAAK;EACD,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,KAAK;EACjB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI",
+"sources": ["../../scss/helpers/_variables.scss","../../scss/pages/QuestionPage.scss"],
+"names": [],
+"file": "QuestionPage.css"
+}

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.btn-question-footer {
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  border: 3px solid white;
+  border-radius: 100px;
+  font-size: 10px; }
+
+.theme-gray-bg {
+  background-color: #383C4A; }
+
+.theme-black-bg {
+  background-color: #262A32; }
+
+.box {
+  border-radius: 10px;
+  background: white;
+  height: 100%;
+  padding: 10px; }
+
+/*# sourceMappingURL=QuestionPage.css.map */

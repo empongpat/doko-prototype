@@ -7,21 +7,27 @@ import 'brace/theme/monokai'
 
 export default class Editor extends React.Component {
 
+  constructor(props){
+    super(props)
+    console.log('sikh')
+  }
   static propTypes = {
-    defaultValue: PropTypes.string
+    value: PropTypes.string,
+    onChange: PropTypes.func
   }
 
   static defaultProps = {
-    defaultValue: ''
+    value: '',
+    onChange: function(){}
   }
-
-  onChange = (newValue) => {
-    console.log('Change', newValue)
+  
+  onChange = (newValue) =>{
+    this.props.onChange(newValue)
   }
 
   render() {
 
-    const { defaultValue } = this.props
+    const { value } = this.props
 
     return (
       <AceEditor
@@ -33,10 +39,11 @@ export default class Editor extends React.Component {
         showPrintMargin={true}
         showGutter={true}
         highlightActiveLine={true}
-        defaultValue={defaultValue}
+        value={value}
         setOptions={{
           showLineNumbers: true
-        }} />
+        }} 
+        theme="s"/>
     )
   }
 }
