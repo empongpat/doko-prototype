@@ -9,6 +9,7 @@ import CareerList from 'containers/CareerList'
 import CareerDetails from 'containers/CareerDetails'
 import Workshop from 'containers/Workshop'
 import CareerInterest from 'containers/CareerInterest'
+import Editor from 'containers/Editor'
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/career" component={Career} />
           <Route path="/workshop" component={Workshop} />
           <Route path="/interest" component={CareerInterest} />
+          <Route path="/editor" component={Editor} />
         </Switch>
       </div>
     );
