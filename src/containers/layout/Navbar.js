@@ -16,7 +16,6 @@ import Logo from 'assets/images/doko-logo.svg';
 export default class Example extends React.Component {
     state = {
         isOpen: false,
-        isQuestionPage: window.location.href.indexOf('editor') !== -1,
     }
     toggle = () => {
         this.setState({
@@ -24,10 +23,11 @@ export default class Example extends React.Component {
         });
     }
     render() {
+        const isQuestionPage = window.location.href.indexOf('editor') !== -1
         return (
             <div>
                 {
-                    this.state.isQuestionPage ?
+                    isQuestionPage ?
                         <Navbar fixed="top" color="dark" expand="md">
                             <NavbarBrand id="brand" tag={ RouterNavLink } to="/"><img src={ Logo } alt="" width="60" height="60" /><span className="text-white">doko</span></NavbarBrand>
                             <NavbarToggler onClick={ this.toggle } />

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Button } from 'reactstrap'
 import Editor from 'components/Editor'
 import 'assets/styles/css/pages/QuestionPage.css'
 import swal from 'sweetalert'
@@ -100,6 +100,7 @@ export default class TestQuestionPage extends React.Component {
               <div className="col-12 mt-3">
                 <div className="box">
                   <Editor onChange={ this.editorOnChange } value={ this.state.editorValue } />
+                  <Button color="success" style={ {"position": "absolute", "bottom": 8, "right":8, "zIndex": 999} }>Run</Button>
                 </div>
               </div>
             </div>
