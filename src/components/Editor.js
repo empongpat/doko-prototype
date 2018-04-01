@@ -9,8 +9,8 @@ export default class Editor extends React.Component {
 
   constructor(props){
     super(props)
-    console.log('sikh')
   }
+  
   static propTypes = {
     value: PropTypes.string,
     onChange: PropTypes.func

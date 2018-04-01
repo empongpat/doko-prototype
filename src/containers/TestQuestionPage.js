@@ -3,7 +3,7 @@ import React from 'react'
 import Editor from 'components/Editor'
 import 'assets/styles/css/pages/QuestionPage.css'
 import swal from 'sweetalert'
-
+import axios from 'axios'
 import fontawesome from '@fortawesome/fontawesome'
 import angleUp from '@fortawesome/fontawesome-free-solid/faAngleUp'
 import angleDown from '@fortawesome/fontawesome-free-solid/faAngleDown'
@@ -20,6 +20,16 @@ export default class TestQuestionPage extends React.Component {
       evalValue: "",
       isTopicMenuExpanded: false
     }
+  }
+
+  componentWillMount() {
+    axios.get('https://139.59.246.127/questions')
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
   }
 
   toggleTopicMenu = () => {
@@ -97,7 +107,7 @@ export default class TestQuestionPage extends React.Component {
         </div>
         <div className="row m-0 p-3 justify-content-center">
           <button className="btn-question-footer mr-3 px-5 py-1">BACK</button>
-          <button className="btn-question-footer ml-3 px-5 py-1" onClick={this.submitOnClick}>NEXT</button>
+          <button className="btn-question-footer ml-3 px-5 py-1" onClick={ this.submitOnClick }>NEXT</button>
         </div>
       </div>)
   }

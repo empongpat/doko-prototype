@@ -16,7 +16,7 @@ import Logo from 'assets/images/doko-logo.svg';
 export default class Example extends React.Component {
     state = {
         isOpen: false,
-        isQuestionPage: window.location.href.indexOf('editor') !== 0,
+        isQuestionPage: window.location.href.indexOf('editor') !== -1,
     }
     toggle = () => {
         this.setState({
