@@ -80,9 +80,8 @@ export default class TestQuestionPage extends React.Component {
     const nextQuestionIdx = this.state.currentQuestionIdx + DeltaIdx
     if (nextQuestionIdx == this.state.questionList.length) {
       swal({
-        title: "Congrats",
-        text: `<img src="/images/awardjs.svg" style='width:150px;'>`,
-        html: true,
+        title: "ยินดีด้วยคุณเรียน Javascript เบื้องต้น สำเร็จแล้ว!!!",
+        icon: "/images/awardjs.svg",
       })
       return
     }
@@ -116,16 +115,25 @@ export default class TestQuestionPage extends React.Component {
       .then(function (response) {
         const evalResponse = response.data
         if (evalResponse.success) {
-          swal({
-            title: "Congrats",
-            icon: "<img src='/images/awardjs.svg' style='width:150px;'>",
-        })
-          // swal(evalResponse.message, "", "success")
+
+          if (thisObj.state.currentQuestionIdx == 7) {
+
+            swal({
+              title: "ลุงตู่มาแล้ว!!!",
+              icon: "/images/big_tuu.jpg",
+              button: "รีบหนี!!!"
+            })
+
+          } else {
+          swal(evalResponse.message, "", "success")
+            
+          }
           thisObj.setState({
             evalValue: evalResponse.stdout,
             evalHasError: false,
             disableNextButton: false
           })
+
         } else {
           swal(evalResponse.message, "", "error")
           thisObj.setState({
