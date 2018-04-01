@@ -18,9 +18,12 @@ export default class TestQuestionPage extends React.Component {
     this.state = {
       editorValue: "",
       evalValue: "",
+      evalHasError: "",
       isTopicMenuExpanded: false,
       questionList: [],
-      currentQuestionIdx: 0
+      currentQuestionIdx: 0,
+      disableNextButton: false,
+      maxQuestionIdx: 0 // keep track of "highest" question answered, enable NEXT button when pressing PREV to already answered questions
     }
   }
 
@@ -33,7 +36,8 @@ export default class TestQuestionPage extends React.Component {
         console.log(response.data.questions)
         thisObj.setState({
           questionList: response.data.questions,
-          editorValue: response.data.questions[0].editorText
+          editorValue: response.data.questions[0].editorText,
+          disableNextButton: response.data.questions[0].haveQuestion,
         })
       })
       .catch(function (error) {
@@ -53,18 +57,6 @@ export default class TestQuestionPage extends React.Component {
     console.log(value)
     this.setState({
       editorValue: value,
-      // evalValue: value + " answer"
-    })
-  }
-
-  prevOnClick = () => {
-    if (this.state.currentQuestionIdx == 0) {
-      return
-    }
-    const prevQuestionIdx = this.state.currentQuestionIdx - 1
-    this.setState({
-      currentQuestionIdx: prevQuestionIdx,
-      editorValue: this.state.questionList[prevQuestionIdx].editorText
     })
   }
 
@@ -87,21 +79,32 @@ export default class TestQuestionPage extends React.Component {
   moveToQuestion = (DeltaIdx) => {
     const nextQuestionIdx = this.state.currentQuestionIdx + DeltaIdx
     if (nextQuestionIdx == this.state.questionList.length) {
-      // finished all question
+      swal({
+        title: "Congrats",
+        text: `<img src="/images/awardjs.svg" style='width:150px;'>`,
+        html: true,
+      })
       return
     }
-    if (nextQuestionIdx < 0){
+    if (nextQuestionIdx < 0) {
       return
     }
     this.setState({
       currentQuestionIdx: nextQuestionIdx,
       editorValue: this.state.questionList[nextQuestionIdx].editorText,
-      evalValue: ""
+      evalValue: "",
+      evalHasError: false,
+      disableNextButton: nextQuestionIdx < this.state.maxQuestionIdx ? false : this.state.questionList[nextQuestionIdx].haveQuestion,
+      maxQuestionIdx: Math.max(nextQuestionIdx, this.state.maxQuestionIdx)
     })
   }
 
   nextOnClick = () => {
     this.moveToQuestion(1)
+  }
+
+  prevOnClick = () => {
+    this.moveToQuestion(-1)
   }
 
   runOnClick = () => {
@@ -113,15 +116,21 @@ export default class TestQuestionPage extends React.Component {
       .then(function (response) {
         const evalResponse = response.data
         if (evalResponse.success) {
-          swal(evalResponse.message, "", "success")
+          swal({
+            title: "Congrats",
+            icon: "<img src='/images/awardjs.svg' style='width:150px;'>",
+        })
+          // swal(evalResponse.message, "", "success")
           thisObj.setState({
-            evalValue: evalResponse.stdout
+            evalValue: evalResponse.stdout,
+            evalHasError: false,
+            disableNextButton: false
           })
-
         } else {
           swal(evalResponse.message, "", "error")
           thisObj.setState({
-            evalValue: evalResponse.stderr
+            evalValue: evalResponse.stderr,
+            evalHasError: true
           })
         }
       })
@@ -149,9 +158,9 @@ export default class TestQuestionPage extends React.Component {
                 <span onClick={ this.toggleTopicMenu }><i className="fas fa-angle-down expand-button active"></i></span>
                 { this.state.isTopicMenuExpanded ?
                   <ul>
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                    <li>Milk</li>
+                    <li>Javascript: basics</li>
+                    <li>Javascript: string operations</li>
+                    <li>Javascript: arrays</li>
                   </ul>
                   : null
                 }
@@ -168,7 +177,7 @@ export default class TestQuestionPage extends React.Component {
           <div className="col-8">
             <div className="row" style={ { "height": "30%" } }>
               <div className="col-12">
-                <div className="box">
+                <div className="box" style={ this.state.evalHasError ? { "color": "red" } : {} }>
                   { this.state.evalValue }
                 </div>
               </div>
@@ -187,7 +196,7 @@ export default class TestQuestionPage extends React.Component {
         </div>
         <div className="row m-0 p-3 justify-content-center">
           <button className="btn-question-footer mr-3 px-5 py-1" onClick={ this.prevOnClick }>BACK</button>
-          <button className="btn-question-footer ml-3 px-5 py-1" onClick={ this.nextOnClick }>NEXT</button>
+          <button disabled={ this.state.disableNextButton } className="btn-question-footer ml-3 px-5 py-1" onClick={ this.nextOnClick }>NEXT</button>
         </div>
       </div>)
   }

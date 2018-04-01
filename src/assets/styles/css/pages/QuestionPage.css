@@ -5,7 +5,18 @@
   font-weight: bold;
   border: 3px solid white;
   border-radius: 100px;
-  font-size: 16px; }
+  font-size: 16px;
+  transition: all 200ms ease-in-out; }
+
+.btn-question-footer:hover {
+  background: white;
+  color: #383C4A;
+  border-color: #383C4A; }
+
+.btn-question-footer:disabled {
+  background: #ccc;
+  color: #999;
+  border-color: #ccc; }
 
 .theme-gray-bg {
   background-color: #383C4A; }
