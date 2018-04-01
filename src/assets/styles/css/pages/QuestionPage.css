@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Mitr:300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 .btn-question-footer {
   background: transparent;
   color: white;
@@ -6,7 +8,9 @@
   border: 3px solid white;
   border-radius: 100px;
   font-size: 16px;
-  transition: all 200ms ease-in-out; }
+  transition: all 200ms ease-in-out;
+  font-family: "Mitr", sans-serif;
+ }
 
 .btn-question-footer:hover {
   background: white;
@@ -25,11 +29,27 @@
   background-color: #262A32; }
 
 .box {
-  border-radius: 10px;
   background: white;
+  border-radius: 10px;
   height: 100%;
   padding: 10px;
-  position: relative; }
+  position: relative;
+  overflow-y: auto; }
+
+.box:first-child {
+  font-family: "Mitr", sans-serif;
+  font-weight: 300; }
+
+#console {
+  background: #262A32;
+  color: white;
+  font-family: "Roboto Mono", monospace; }
+
+.badge.badge-secondary {
+  font-family: "Mitr", sans-serif;
+  position: absolute;
+  top: 8px;
+  right: 8px; }
 
 .content-container {
   margin-top: 0px !important;
@@ -65,5 +85,8 @@
   border: 1px solid gray;
   border-radius: 5px;
   transition: height 300ms ease-in-out; }
+
+.runButton {
+  font-family: "Mitr", sans-serif; }
 
 /*# sourceMappingURL=QuestionPage.css.map */

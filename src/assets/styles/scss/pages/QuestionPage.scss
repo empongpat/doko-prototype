@@ -5,6 +5,7 @@
     font-weight: bold;
     border: 3px solid white;
     border-radius: 100px;
+    font-family: $thai-font-stack;
     font-size: 16px;
     transition: all 200ms ease-in-out;
 }
@@ -30,11 +31,32 @@
 }
 
 .box {
-    border-radius: 10px;
     background: white;
+    border-radius: 10px;
     height: 100%;
     padding: 10px;
     position: relative;
+    overflow-y: auto;
+}
+
+.box:first-child {
+    font-family: $thai-font-stack;
+    font-weight: 300;
+}
+
+#console {
+    background: #262A32;
+    color: white;
+    font-family: $mono-font-stack;
+}
+
+.badge {
+    &.badge-secondary {
+        font-family: $thai-font-stack;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
 }
 
 .content-container {
@@ -74,4 +96,8 @@
     border: 1px solid gray;
     border-radius: 5px;
     transition: height 300ms ease-in-out;
+}
+
+.runButton {
+    font-family: $thai-font-stack;
 }
