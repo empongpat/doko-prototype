@@ -31,7 +31,7 @@ export default class Example extends React.Component {
                         <Navbar fixed="top" color="dark" expand="md">
                             <NavbarBrand id="brand" tag={ RouterNavLink } to="/"><img src={ Logo } alt="" width="60" height="60" /><span className="text-white">doko</span></NavbarBrand>
                             <NavbarToggler onClick={ this.toggle } />
-                            <div className="navbar-title">Javascript</div>
+                            <div className="navbar-title">Javascript เบื้องต้น</div>
                         </Navbar>
                         :
                         <Navbar fixed="top" color="white" light expand="md">

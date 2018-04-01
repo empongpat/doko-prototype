@@ -27,6 +27,7 @@
 .navbar-title {
   color: white;
   position: absolute;
+  font-family: "Mitr", sans-serif;
   font-size: 25px;
   left: 50%;
   transform: translateX(-50%); }
