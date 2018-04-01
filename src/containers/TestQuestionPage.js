@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'reactstrap'
+import { Badge, Button } from 'reactstrap'
 import Editor from 'components/Editor'
 import 'assets/styles/css/pages/QuestionPage.css'
 import swal from 'sweetalert'
@@ -168,8 +168,9 @@ export default class TestQuestionPage extends React.Component {
           <div className="col-8">
             <div className="row" style={ { "height": "30%" } }>
               <div className="col-12">
-                <div className="box">
+                <div className="box" id="console">
                   { this.state.evalValue }
+                  <Badge color="secondary">Console</Badge>
                 </div>
               </div>
             </div>
@@ -178,7 +179,7 @@ export default class TestQuestionPage extends React.Component {
                 <div className="box">
                   <Editor onChange={ this.editorOnChange } value={ this.state.editorValue } />
                   { this.state.questionList.length > 0 ?
-                    <Button onClick={ this.runOnClick } disabled={ this.state.questionList[this.state.currentQuestionIdx].haveQuestion !== true } color="success" style={ { "position": "absolute", "bottom": 8, "right": 8, "zIndex": 999 } }>Run</Button>
+                    <Button id="runButton" onClick={ this.runOnClick } disabled={ this.state.questionList[this.state.currentQuestionIdx].haveQuestion !== true } color="success" style={ { "position": "absolute", "bottom": 8, "right": 8, "zIndex": 999 } }>&nbsp;Run&nbsp;</Button>
                     : null }
                 </div>
               </div>
@@ -186,8 +187,8 @@ export default class TestQuestionPage extends React.Component {
           </div>
         </div>
         <div className="row m-0 p-3 justify-content-center">
-          <button className="btn-question-footer mr-3 px-5 py-1" onClick={ this.prevOnClick }>BACK</button>
-          <button className="btn-question-footer ml-3 px-5 py-1" onClick={ this.nextOnClick }>NEXT</button>
+          <button className="btn-question-footer mr-3 px-5 py-1" onClick={ this.prevOnClick }>ย้อนกลับ</button>
+          <button className="btn-question-footer ml-3 px-5 py-1" onClick={ this.nextOnClick }>ถัดไป</button>
         </div>
       </div>)
   }

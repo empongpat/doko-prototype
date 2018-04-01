@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Mitr:300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 .hero {
   min-height: 100vh;
   background-image: url("../../../images/landing_hero.jpg");
