@@ -35,7 +35,7 @@ export default class Editor extends React.Component {
         // theme={'monokai'}
         onChange={this.onChange}
         name="EDITOR"
-        fontSize={14}
+        fontSize={12}
         showPrintMargin={true}
         showGutter={true}
         highlightActiveLine={true}

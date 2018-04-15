@@ -10,6 +10,8 @@ import CareerDetails from 'containers/CareerDetails'
 import Workshop from 'containers/Workshop'
 import CareerInterest from 'containers/CareerInterest'
 import TestQuestionPage from 'containers/TestQuestionPage'
+import DraftJs from 'containers/DraftJs'
+import CodeMirrorContainer from 'containers/CodeMirror'
 
 class App extends Component {
   render() {
@@ -24,6 +26,8 @@ class App extends Component {
           <Route path="/workshop" component={Workshop} />
           <Route path="/interest" component={CareerInterest} />
           <Route path="/editor" component={TestQuestionPage} />
+          <Route path="/draftjs" component={DraftJs} />
+          <Route path="/codemirror" component={CodeMirrorContainer} />
         </Switch>
       </div>
     );
